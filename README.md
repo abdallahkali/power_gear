@@ -1,85 +1,103 @@
 # PowerGear — Sports E-Commerce App
 
-A bilingual Flutter e-commerce app prototype for sports equipment, clothing, and accessories. The app demonstrates a local shopping experience with product discovery, cart management, favorites, checkout UI, and order history.
+A bilingual Flutter shopping-app prototype for sports equipment, training wear, and accessories. PowerGear demonstrates a complete customer-facing shopping journey, from discovering products to reviewing an order.
 
-## Screenshots
+<p align="center">
+  <img src="https://img.shields.io/badge/Flutter-3.3%2B-02569B?logo=flutter" alt="Flutter">
+  <img src="https://img.shields.io/badge/Dart-3.3%2B-0175C2?logo=dart" alt="Dart">
+  <img src="https://img.shields.io/badge/State%20Management-Provider-7B1FA2" alt="Provider">
+  <img src="https://img.shields.io/badge/Storage-SharedPreferences-4CAF50" alt="SharedPreferences">
+</p>
 
-The app screenshots are prepared in the `screenshots/` folder. Add the supplied screenshot files to this folder to display the gallery here.
+## Overview
+
+PowerGear focuses on a polished sports-store experience with product discovery, cart management, favorites, localization, and theme preferences. The current version uses sample/local data and is intended as a front-end application prototype.
 
 ## Features
 
-- Home screen with promotional banners and product collections
-- Browse sports-product categories
-- Search, filter, and sort products
-- Product details with variant/size and quantity selection
-- Shopping cart, quantity updates, and favorites
-- Promo-code support and order summary
-- Checkout and order-success UI flow
-- Local order history
-- Arabic and English localization
-- Light, dark, and system appearance options
-- Local persistence for cart, favorites, orders, language, and theme
+- **Discover products:** promotional banners, best sellers, and product categories
+- **Explore the catalog:** search, filtering, and sorting
+- **Product details:** product information, variants/sizes, and quantity selection
+- **Shopping cart:** add/remove items and update quantities
+- **Favorites:** save products for later
+- **Checkout experience:** promo-code field, order summary, and checkout UI
+- **Order history:** review locally stored orders
+- **Personalization:** Arabic/English language and system/light/dark appearance
+- **Local persistence:** retain supported shopping and preference data between launches
 
-## Tech Stack
+## Screenshots
 
-- **Flutter & Dart** — cross-platform UI
-- **Provider** — state management
+The following captures show the running Android application. They are intended to be displayed directly in this README:
+
+> Screenshot files are not yet committed to this repository. The gallery will render once the corresponding images are uploaded to `screenshots/`.
+
+| Home — Dark theme | Home — Light theme |
+|---|---|
+| `screenshots/01-home-dark.jpg` | `screenshots/02-home-light.jpg` |
+
+| Shopping cart | Profile & settings |
+|---|---|
+| `screenshots/03-cart.jpg` | `screenshots/04-profile.jpg` |
+
+| Order history |
+|---|
+| `screenshots/05-orders.jpg` |
+
+## Built With
+
+- **Flutter & Dart** — cross-platform mobile UI
+- **Provider** — application state management
 - **SharedPreferences** — local persistence
-- **Repository abstraction** — separation of data access from UI
-- **Mock product data** — sample catalog for the prototype
+- **Repository abstraction** — separates data access from presentation
+- **Mock product data** — sample catalog for the current prototype
+
+## Getting Started
+
+### Prerequisites
+
+- Flutter SDK and Dart (Dart 3.3 or later)
+- Android Studio or another Flutter-supported IDE
+- Android emulator or a physical device
+
+### Run the application
+
+```bash
+git clone https://github.com/abdallahkali/power_gear.git
+cd power_gear
+flutter pub get
+flutter devices
+flutter run
+```
+
+To run on a specific device:
+
+```bash
+flutter run -d <device-id>
+```
 
 ## Project Structure
 
 ```text
 lib/
-  core/       # Brand settings, theme, localization, and formatting
-  models/     # Product, cart, and order models
-  data/       # Repository contract and mock product data
-  providers/  # Catalog, cart, favorites, orders, and settings
-  screens/    # Home, shop, details, cart, checkout, and orders
-  widgets/    # Reusable product and UI components
+  core/        # App settings, theme, localization, and helpers
+  models/      # Product, cart, and order models
+  data/        # Repository abstraction and mock catalog
+  providers/   # Catalog, cart, favorites, orders, and settings state
+  screens/     # Home, shop, details, cart, checkout, and orders
+  widgets/     # Reusable UI components
 assets/
-  images/     # Sports-product images used by the app
-screenshots/  # App screenshots captured from the Android emulator
+  images/      # Product and promotional assets
 ```
 
-## Getting Started
+## Current Scope & Limitations
 
-### Requirements
-
-- Flutter SDK with Dart **3.3 or later**
-- Android Studio or another Flutter-supported IDE
-- An Android emulator or a connected device
-
-### Run locally
-
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/abdallahkali/power_gear.git
-   cd power_gear
-   ```
-2. Install dependencies:
-   ```bash
-   flutter pub get
-   ```
-3. Check available devices:
-   ```bash
-   flutter devices
-   ```
-4. Run the application:
-   ```bash
-   flutter run
-   ```
-
-To target a specific device, run `flutter run -d <device-id>`.
-
-## Data & Current Limitations
-
-- The product catalog uses mock/local data.
-- Checkout is a demonstration UI; no real payment gateway is connected.
+- The product catalog is based on mock/local data.
+- Checkout is a demonstration flow; no real payment gateway is connected.
 - Orders and shopping preferences are stored locally.
-- No production backend, live inventory, or server-side authentication is connected in this version.
+- No production backend, live inventory, or server-side authentication is connected.
 
-## Repository
+## Author
 
-[github.com/abdallahkali/power_gear](https://github.com/abdallahkali/power_gear)
+**Abdallah Khalifa** · [GitHub](https://github.com/abdallahkali)
+
+[⬆ Back to top](#powergear--sports-e-commerce-app)
