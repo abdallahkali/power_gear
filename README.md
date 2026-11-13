@@ -1,36 +1,40 @@
 # PowerGear — Sports E-Commerce App
 
-A bilingual Flutter shopping-app prototype for browsing sports equipment, clothing, and accessories through a local e-commerce flow.
+A bilingual Flutter e-commerce app prototype for sports equipment, clothing, and accessories. The app demonstrates a local shopping experience with product discovery, cart management, favorites, checkout UI, and order history.
+
+## App Preview
+
+<p align="center">
+  <img src="screenshots/01-home-dark.png" width="190" alt="PowerGear home screen in dark mode" />
+  <img src="screenshots/05-home-light.png" width="190" alt="PowerGear home screen in light mode" />
+  <img src="screenshots/02-shopping-cart.png" width="190" alt="PowerGear shopping cart" />
+</p>
+<p align="center">
+  <img src="screenshots/03-profile.png" width="190" alt="PowerGear profile and settings" />
+  <img src="screenshots/04-order-history.png" width="190" alt="PowerGear order history" />
+</p>
 
 ## Features
 
-- Home screen with promotional content and product collections
+- Home screen with promotional banners and product collections
 - Browse sports-product categories
 - Search, filter, and sort products
-- Product details with size/variant and quantity selection
-- Shopping cart and favorites
-- Promo-code support
-- Checkout and order-success flow
+- Product details with variant/size and quantity selection
+- Shopping cart, quantity updates, and favorites
+- Promo-code support and order summary
+- Checkout and order-success UI flow
 - Local order history
 - Arabic and English localization
-- Light and dark themes
+- Light, dark, and system appearance options
 - Local persistence for cart, favorites, orders, language, and theme
 
 ## Tech Stack
 
-- Flutter and Dart
-- Provider for state management
-- SharedPreferences for local persistence
-- Repository abstraction with mock product data
-
-## Screenshots
-
-Real in-app screenshots have not been added to this repository yet. Capture the running application and add the images under `screenshots/`. Suggested filenames:
-
-- `screenshots/01-home.png`
-- `screenshots/02-product-details.png`
-- `screenshots/03-shopping-cart.png`
-- `screenshots/04-checkout.png`
+- **Flutter & Dart** — cross-platform UI
+- **Provider** — state management
+- **SharedPreferences** — local persistence
+- **Repository abstraction** — separation of data access from UI
+- **Mock product data** — sample catalog for the prototype
 
 ## Project Structure
 
@@ -44,6 +48,7 @@ lib/
   widgets/    # Reusable product and UI components
 assets/
   images/     # Sports-product images used by the app
+screenshots/  # App screenshots captured from the Android emulator
 ```
 
 ## Getting Started
@@ -59,32 +64,30 @@ assets/
 1. Clone the repository:
    ```bash
    git clone https://github.com/abdallahkali/power_gear.git
-   ```
-2. Open the project directory:
-   ```bash
    cd power_gear
    ```
-3. Install dependencies:
+2. Install dependencies:
    ```bash
    flutter pub get
    ```
-4. Check available devices:
+3. Check available devices:
    ```bash
    flutter devices
    ```
-5. Run the app:
+4. Run the application:
    ```bash
    flutter run
    ```
 
-To target a particular device, use `flutter run -d <device-id>`.
+To target a specific device, run `flutter run -d <device-id>`.
 
-## Data and Limitations
+## Data & Current Limitations
 
-- Product catalog and checkout currently use mock/local data.
-- Card payment is a UI flow only; no real payment gateway is connected.
-- Orders are stored locally; there is no production backend or inventory service in this version.
+- The product catalog uses mock/local data.
+- Checkout is a demonstration UI; no real payment gateway is connected.
+- Orders and shopping preferences are stored locally.
+- No production backend, live inventory, or server-side authentication is connected in this version.
 
 ## Repository
 
-https://github.com/abdallahkali/power_gear
+[github.com/abdallahkali/power_gear](https://github.com/abdallahkali/power_gear)
