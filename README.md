@@ -2,17 +2,9 @@
 
 A bilingual Flutter e-commerce app prototype for sports equipment, clothing, and accessories. The app demonstrates a local shopping experience with product discovery, cart management, favorites, checkout UI, and order history.
 
-## App Preview
+## Screenshots
 
-<p align="center">
-  <img src="screenshots/01-home-dark.png" width="190" alt="PowerGear home screen in dark mode" />
-  <img src="screenshots/05-home-light.png" width="190" alt="PowerGear home screen in light mode" />
-  <img src="screenshots/02-shopping-cart.png" width="190" alt="PowerGear shopping cart" />
-</p>
-<p align="center">
-  <img src="screenshots/03-profile.png" width="190" alt="PowerGear profile and settings" />
-  <img src="screenshots/04-order-history.png" width="190" alt="PowerGear order history" />
-</p>
+The app screenshots are prepared in the `screenshots/` folder. Add the supplied screenshot files to this folder to display the gallery here.
 
 ## Features
 
