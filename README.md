@@ -1,58 +1,51 @@
-# PowerGear — باور جير
+# PowerGear — Sports E-Commerce App
 
-متجر باور جير للأدوات والملابس الرياضية الرجالي. تطبيق Flutter بلغتين (العربية / English) وثيم فاتح وداكن.
+A bilingual sports shopping application built with **Flutter and Dart**, designed around a sports-products catalog and a familiar e-commerce experience.
 
-## التشغيل (Flutter 3.27 أو أحدث)
+## Features
+- Home screen with promotional content and product collections
+- Browse product categories
+- Search, filter, and sort products
+- Product details with size/variant and quantity selection
+- Shopping cart and favorites
+- Promo-code support
+- Checkout flow and order-success screen
+- Order history
+- Arabic / English localization
+- Light / dark themes
+- Local persistence for cart, favorites, orders, language, and theme
+
+## Tech Stack
+- Flutter / Dart
+- Provider for state management
+- SharedPreferences for local persistence
+- Repository abstraction with mock product data
+
+## Project Structure
+```text
+lib/
+  core/       # Brand settings, theme, localization, formatting
+  models/     # Product, cart, and order models
+  data/       # Repository contract and mock product data
+  providers/  # Catalog, cart, favorites, orders, settings
+  screens/    # Home, shop, details, cart, checkout, orders
+  widgets/    # Reusable product and UI components
+assets/
+  images/     # Product images
+```
+
+## Getting Started
+Requires Flutter 3.27 or later.
+
 ```bash
-cd power_gear
-flutter create --org com.yourcompany --project-name power_gear .
 flutter pub get
-dart run flutter_launcher_icons     # أيقونة التطبيق
 flutter run
 ```
-> `flutter create .` بيولّد فولدرات android/ios ومش بيمسح كود `lib`.
 
-### إعداد الاتصال وواتساب (url_launcher)
-**Android** — في `android/app/src/main/AndroidManifest.xml` قبل `<application>`:
-```xml
-<queries>
-  <intent><action android:name="android.intent.action.VIEW"/><data android:scheme="https"/></intent>
-  <intent><action android:name="android.intent.action.DIAL"/><data android:scheme="tel"/></intent>
-</queries>
-```
-**iOS** — في `ios/Runner/Info.plist`:
-```xml
-<key>LSApplicationQueriesSchemes</key>
-<array><string>tel</string><string>https</string></array>
-```
+## Important Notes
+- Product catalog and checkout currently use mock/local data.
+- Card payment is a UI flow only; no real payment gateway is connected.
+- Orders are stored locally; no production backend or inventory service is connected.
 
-## الميزات
-- شاشة بداية، رئيسية بعروض متحركة، أقسام، الأكثر مبيعًا، العروض، وصل حديثًا
-- متجر بحث + فلتر (قسم / سعر / عروض) + ترتيب
-- تفاصيل المنتج: مقاسات أو درجات ألوان، كمية، مميزات، منتجات مشابهة
-- سلة (سحب للحذف + تراجع) + كود خصم **POWER10** (10%) + شحن مجاني فوق 1500 ج.م
-- إتمام الشراء: بيانات توصيل + دفع عند الاستلام أو بطاقة (واجهة فقط) + صفحة نجاح
-- طلباتي، المفضلة، الإعدادات (اللغة / المظهر)، تواصل
-- الحفظ المحلي للسلة والمفضلة والطلبات واللغة والثيم (shared_preferences)
-
-## المعمارية
-```
-lib/
- core/       brand.dart (الهوية)، theme، l10n (ar/en)، format
- models/     Product, Bi (نص ثنائي اللغة), CartItem, Order
- data/       StoreRepository (interface) + MockStoreRepository + products_data
- providers/  catalog, cart, favorites, orders, settings, nav
- screens/    splash, shell, home, shop, details, cart, checkout, success, orders, profile
- widgets/    product_card, product_image, promo_carousel, common
-assets/images/  صور المنتجات (PNG شفافة)
-```
-
-## تخصيص
-- الاسم والألوان والكود الترويجي والشحن: `lib/core/brand.dart`
-- المنتجات والأقسام: `lib/data/products_data.dart` (والصورة في `assets/images/`)
-- النصوص: `lib/core/l10n.dart`
-
-## ربط API لاحقًا
-1. اعمل `ApiStoreRepository` يـ implements `StoreRepository`.
-2. بدّل `MockStoreRepository()` في `main.dart`.
-3. الصور تقبل روابط `http` مباشرة في `Product.image`.
+## Repository
+https://github.com/abdallahkali/power_gear
